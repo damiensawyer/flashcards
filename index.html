@@ -36,6 +36,7 @@
             <label>Enter the text of the document</label>
             <textarea data-bind="value:sourceText, valueUpdate:'keyup'" class="form-control" rows="10"></textarea>
             <button class="btn btn-info btn-xs" data-bind="click:loadTale">Load "A Tale of Two Sisters"</button>
+            <button class="btn btn-success btn-xs" data-bind="click:playGame">Play Game :-)"</button>
           </div>
 
           <div class="form-group">
@@ -47,16 +48,27 @@
 
         <!-- results -->
         <div data-bind="foreach:distinctList">
-            <div data-bind="visible:!!$data, text:$data"
-            style="float:left;
-            padding:10px 50px;
-            margin:10px 10px;
-            height:85px;
-            font-size:30pt;
-            min-width:200px;
-            text-align:center;
-            border:3px double black;"
-            class="thumbnail" >
+          <div data-bind="visible:!!$data, text:$data"
+          style="float:left;
+          padding:10px 50px;
+          margin:10px 10px;
+          height:85px;
+          font-size:30pt;
+          min-width:200px;
+          text-align:center;
+          text-color:black;
+          background-image:url(back1.jpg);
+          border:3px solid rgba(170,170,170,1);
+          text-shadow:4px 7px 7px rgba(170,170,170,1);font-weight:normal;color:#000000;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: white;
+          font-weight:bolder;     
+          "
+
+          class="thumbnail" >
+
+
+
 
         </div>
       </div>
