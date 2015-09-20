@@ -1,0 +1,335 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'generator-angular-bootstrap' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 verbose cache add [ 'generator-angular-bootstrap', null ]
+5 verbose cache add name=undefined spec="generator-angular-bootstrap" args=["generator-angular-bootstrap",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'generator-angular-bootstrap',
+6 verbose parsed url   path: 'generator-angular-bootstrap',
+6 verbose parsed url   href: 'generator-angular-bootstrap' }
+7 silly lockFile 78a6b95b-generator-angular-bootstrap generator-angular-bootstrap
+8 verbose lock generator-angular-bootstrap /Users/damiensawyer/.npm/78a6b95b-generator-angular-bootstrap.lock
+9 silly lockFile 78a6b95b-generator-angular-bootstrap generator-angular-bootstrap
+10 silly lockFile 78a6b95b-generator-angular-bootstrap generator-angular-bootstrap
+11 verbose addNamed [ 'generator-angular-bootstrap', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 89e1b7ea-generator-angular-bootstrap generator-angular-bootstrap@
+14 verbose lock generator-angular-bootstrap@ /Users/damiensawyer/.npm/89e1b7ea-generator-angular-bootstrap.lock
+15 silly addNameRange { name: 'generator-angular-bootstrap',
+15 silly addNameRange   range: '*',
+15 silly addNameRange   hasData: false }
+16 verbose url raw generator-angular-bootstrap
+17 verbose url resolving [ 'https://registry.npmjs.org/',
+17 verbose url resolving   './generator-angular-bootstrap' ]
+18 verbose url resolved https://registry.npmjs.org/generator-angular-bootstrap
+19 info trying registry request attempt 1 at 21:07:37
+20 http GET https://registry.npmjs.org/generator-angular-bootstrap
+21 http 200 https://registry.npmjs.org/generator-angular-bootstrap
+22 silly registry.get cb [ 200,
+22 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+22 silly registry.get     etag: '"1AU6I4L4J167ZNV6F1HPTJ6T3"',
+22 silly registry.get     'content-type': 'application/json',
+22 silly registry.get     'cache-control': 'max-age=60',
+22 silly registry.get     'content-length': '13277',
+22 silly registry.get     'accept-ranges': 'bytes',
+22 silly registry.get     date: 'Sun, 20 Sep 2015 11:07:43 GMT',
+22 silly registry.get     via: '1.1 varnish',
+22 silly registry.get     age: '0',
+22 silly registry.get     connection: 'keep-alive',
+22 silly registry.get     'x-served-by': 'cache-mel6521-MEL',
+22 silly registry.get     'x-cache': 'MISS',
+22 silly registry.get     'x-cache-hits': '0',
+22 silly registry.get     'x-timer': 'S1442747261.695376,VS0,VE1786',
+22 silly registry.get     vary: 'Accept' } ]
+23 silly addNameRange number 2 { name: 'generator-angular-bootstrap',
+23 silly addNameRange   range: '*',
+23 silly addNameRange   hasData: true }
+24 silly addNameRange versions [ 'generator-angular-bootstrap',
+24 silly addNameRange   [ '0.2.3',
+24 silly addNameRange     '0.2.4',
+24 silly addNameRange     '0.2.5',
+24 silly addNameRange     '0.2.6',
+24 silly addNameRange     '0.4.1',
+24 silly addNameRange     '0.4.3',
+24 silly addNameRange     '0.5.0',
+24 silly addNameRange     '0.5.1' ] ]
+25 verbose addNamed [ 'generator-angular-bootstrap', '0.5.1' ]
+26 verbose addNamed [ '0.5.1', '0.5.1' ]
+27 silly lockFile 38976650-enerator-angular-bootstrap-0-5-1 generator-angular-bootstrap@0.5.1
+28 verbose lock generator-angular-bootstrap@0.5.1 /Users/damiensawyer/.npm/38976650-enerator-angular-bootstrap-0-5-1.lock
+29 warn deprecated generator-angular-bootstrap@0.5.1: deprecated in favor of generator-ng-factory
+30 silly lockFile 1270d990-ator-angular-bootstrap-0-5-1-tgz https://registry.npmjs.org/generator-angular-bootstrap/-/generator-angular-bootstrap-0.5.1.tgz
+31 verbose lock https://registry.npmjs.org/generator-angular-bootstrap/-/generator-angular-bootstrap-0.5.1.tgz /Users/damiensawyer/.npm/1270d990-ator-angular-bootstrap-0-5-1-tgz.lock
+32 verbose addRemoteTarball [ 'https://registry.npmjs.org/generator-angular-bootstrap/-/generator-angular-bootstrap-0.5.1.tgz',
+32 verbose addRemoteTarball   'cbcfc439b8ddc48ac16bd851e04eff73ab872fb7' ]
+33 info retry fetch attempt 1 at 21:07:39
+34 verbose fetch to= /var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/tmp.tgz
+35 http GET https://registry.npmjs.org/generator-angular-bootstrap/-/generator-angular-bootstrap-0.5.1.tgz
+36 http 200 https://registry.npmjs.org/generator-angular-bootstrap/-/generator-angular-bootstrap-0.5.1.tgz
+37 verbose tar unpack /var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/tmp.tgz
+38 silly lockFile bfe2740e-59871-0-8656660837586969-package tar:///var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/package
+39 verbose lock tar:///var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/package /Users/damiensawyer/.npm/bfe2740e-59871-0-8656660837586969-package.lock
+40 silly lockFile 77bc12c4-59871-0-8656660837586969-tmp-tgz tar:///var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/tmp.tgz
+41 verbose lock tar:///var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/tmp.tgz /Users/damiensawyer/.npm/77bc12c4-59871-0-8656660837586969-tmp-tgz.lock
+42 silly gunzTarPerm modes [ '755', '644' ]
+43 silly gunzTarPerm extractEntry package.json
+44 silly gunzTarPerm extractEntry .npmignore
+45 silly gunzTarPerm extractEntry README.md
+46 silly gunzTarPerm extractEntry LICENSE
+47 silly gunzTarPerm extractEntry .travis.yml
+48 silly gunzTarPerm extractEntry .jshintrc
+49 silly gunzTarPerm extractEntry .editorconfig
+50 silly gunzTarPerm extractEntry .gitattributes
+51 silly gunzTarPerm extractEntry app/index.js
+52 silly gunzTarPerm extractEntry app/modules/generator.js
+53 silly gunzTarPerm extractEntry app/modules/github.js
+54 silly gunzTarPerm extractEntry app/modules/nunjucks-engine.js
+55 silly gunzTarPerm modified mode [ 'app/modules/nunjucks-engine.js', 436, 420 ]
+56 silly gunzTarPerm extractEntry app/modules/utils.js
+57 silly gunzTarPerm extractEntry app/templates/_gulpfile.js
+58 silly gunzTarPerm extractEntry app/templates/bowerrc
+59 silly gunzTarPerm extractEntry app/templates/_README.md
+60 silly gunzTarPerm extractEntry app/templates/_package.json
+61 silly gunzTarPerm extractEntry app/templates/app/_index.html
+62 silly gunzTarPerm extractEntry app/templates/app/_index.jade
+63 silly gunzTarPerm extractEntry app/templates/app/scripts/_app.js
+64 silly gunzTarPerm extractEntry app/templates/app/scripts/controllers/_main.js
+65 silly gunzTarPerm extractEntry app/templates/app/scripts/directives/_main.js
+66 silly gunzTarPerm extractEntry app/templates/app/scripts/directives/_sample.js
+67 silly gunzTarPerm extractEntry app/templates/app/scripts/filters/_main.js
+68 silly gunzTarPerm extractEntry app/templates/app/scripts/filters/_sample.js
+69 silly gunzTarPerm extractEntry app/templates/app/scripts/services/_main.js
+70 silly gunzTarPerm extractEntry app/templates/app/scripts/services/_sample.js
+71 silly gunzTarPerm extractEntry app/templates/app/styles/_main.css
+72 silly gunzTarPerm extractEntry app/templates/app/styles/_main.less
+73 silly gunzTarPerm extractEntry app/templates/app/views/contact.html
+74 silly gunzTarPerm extractEntry app/templates/app/views/contact.jade
+75 silly gunzTarPerm extractEntry app/templates/app/views/features.html
+76 silly gunzTarPerm extractEntry app/templates/app/views/features.jade
+77 silly gunzTarPerm extractEntry app/templates/app/views/home.html
+78 silly gunzTarPerm extractEntry app/templates/app/views/home.jade
+79 silly gunzTarPerm extractEntry app/templates/app/views/partials/footer.html
+80 silly gunzTarPerm extractEntry app/templates/app/views/partials/footer.jade
+81 silly gunzTarPerm extractEntry app/templates/app/views/partials/header.html
+82 silly gunzTarPerm extractEntry app/templates/app/views/partials/header.jade
+83 silly gunzTarPerm extractEntry app/templates/_bower.json
+84 silly gunzTarPerm extractEntry app/templates/editorconfig
+85 silly gunzTarPerm extractEntry app/templates/gitattributes
+86 silly gunzTarPerm extractEntry app/templates/gitignore
+87 silly gunzTarPerm extractEntry app/templates/jshintrc
+88 silly gunzTarPerm extractEntry app/templates/themes/cover/_index.html
+89 silly gunzTarPerm extractEntry app/templates/themes/cover/_index.jade
+90 silly gunzTarPerm extractEntry app/templates/themes/cover/scripts/_app.js
+91 silly gunzTarPerm extractEntry app/templates/themes/cover/styles/_main.css
+92 silly gunzTarPerm extractEntry app/templates/themes/cover/styles/_main.less
+93 silly gunzTarPerm extractEntry app/templates/themes/cover/views/contact.html
+94 silly gunzTarPerm extractEntry app/templates/themes/cover/views/contact.jade
+95 silly gunzTarPerm extractEntry app/templates/themes/cover/views/features.html
+96 silly gunzTarPerm extractEntry app/templates/themes/cover/views/features.jade
+97 silly gunzTarPerm extractEntry app/templates/themes/cover/views/home.html
+98 silly gunzTarPerm extractEntry app/templates/themes/cover/views/home.jade
+99 silly gunzTarPerm extractEntry app/templates/themes/cover/views/partials/footer.html
+100 silly gunzTarPerm extractEntry app/templates/themes/cover/views/partials/footer.jade
+101 silly gunzTarPerm extractEntry app/templates/themes/cover/views/partials/header.html
+102 silly gunzTarPerm extractEntry app/templates/themes/cover/views/partials/header.jade
+103 silly gunzTarPerm extractEntry app/templates/themes/dashboard/_index.html
+104 silly gunzTarPerm extractEntry app/templates/themes/dashboard/_index.jade
+105 silly gunzTarPerm extractEntry app/templates/themes/dashboard/scripts/_app.js
+106 silly gunzTarPerm extractEntry app/templates/themes/dashboard/styles/_main.css
+107 silly gunzTarPerm extractEntry app/templates/themes/dashboard/styles/_main.less
+108 silly gunzTarPerm extractEntry app/templates/themes/dashboard/views/dashboard.jade
+109 silly gunzTarPerm extractEntry app/templates/themes/dashboard/views/includes/navbar.jade
+110 silly gunzTarPerm extractEntry app/templates/themes/dashboard/views/includes/sidebar.jade
+111 silly gunzTarPerm extractEntry test/test-creation.js
+112 silly gunzTarPerm extractEntry test/test-load.js
+113 silly lockFile bfe2740e-59871-0-8656660837586969-package tar:///var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/package
+114 silly lockFile bfe2740e-59871-0-8656660837586969-package tar:///var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/package
+115 silly lockFile 77bc12c4-59871-0-8656660837586969-tmp-tgz tar:///var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/tmp.tgz
+116 silly lockFile 77bc12c4-59871-0-8656660837586969-tmp-tgz tar:///var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/tmp.tgz
+117 verbose tar pack [ '/Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz',
+117 verbose tar pack   '/var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/package' ]
+118 verbose tarball /Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz
+119 verbose folder /var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/package
+120 silly lockFile bfe2740e-59871-0-8656660837586969-package tar:///var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/package
+121 verbose lock tar:///var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/package /Users/damiensawyer/.npm/bfe2740e-59871-0-8656660837586969-package.lock
+122 silly lockFile d95083c4-ular-bootstrap-0-5-1-package-tgz tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz
+123 verbose lock tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz /Users/damiensawyer/.npm/d95083c4-ular-bootstrap-0-5-1-package-tgz.lock
+124 silly lockFile bfe2740e-59871-0-8656660837586969-package tar:///var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/package
+125 silly lockFile bfe2740e-59871-0-8656660837586969-package tar:///var/folders/7j/4y99_gxx2bs4byszc_qtff9h0000gn/T/npm-1761-QCke8sCo/1442747259871-0.8656660837586969/package
+126 silly lockFile d95083c4-ular-bootstrap-0-5-1-package-tgz tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz
+127 silly lockFile d95083c4-ular-bootstrap-0-5-1-package-tgz tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz
+128 silly lockFile a17d6b25--angular-bootstrap-0-5-1-package /Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package
+129 verbose lock /Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package /Users/damiensawyer/.npm/a17d6b25--angular-bootstrap-0-5-1-package.lock
+130 silly lockFile a17d6b25--angular-bootstrap-0-5-1-package /Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package
+131 silly lockFile a17d6b25--angular-bootstrap-0-5-1-package /Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package
+132 verbose tar unpack /Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz
+133 silly lockFile 7daeb445--angular-bootstrap-0-5-1-package tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package
+134 verbose lock tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package /Users/damiensawyer/.npm/7daeb445--angular-bootstrap-0-5-1-package.lock
+135 silly lockFile d95083c4-ular-bootstrap-0-5-1-package-tgz tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz
+136 verbose lock tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz /Users/damiensawyer/.npm/d95083c4-ular-bootstrap-0-5-1-package-tgz.lock
+137 silly gunzTarPerm modes [ '755', '644' ]
+138 silly gunzTarPerm extractEntry package.json
+139 silly gunzTarPerm extractEntry .npmignore
+140 silly gunzTarPerm extractEntry README.md
+141 silly gunzTarPerm extractEntry LICENSE
+142 silly gunzTarPerm extractEntry .editorconfig
+143 silly gunzTarPerm extractEntry .gitattributes
+144 silly gunzTarPerm extractEntry .jshintrc
+145 silly gunzTarPerm extractEntry .travis.yml
+146 silly gunzTarPerm extractEntry app/index.js
+147 silly gunzTarPerm extractEntry app/modules/generator.js
+148 silly gunzTarPerm extractEntry app/modules/github.js
+149 silly gunzTarPerm extractEntry app/modules/nunjucks-engine.js
+150 silly gunzTarPerm extractEntry app/modules/utils.js
+151 silly gunzTarPerm extractEntry app/templates/_gulpfile.js
+152 silly gunzTarPerm extractEntry app/templates/bowerrc
+153 silly gunzTarPerm extractEntry app/templates/_README.md
+154 silly gunzTarPerm extractEntry app/templates/_package.json
+155 silly gunzTarPerm extractEntry app/templates/app/_index.html
+156 silly gunzTarPerm extractEntry app/templates/app/_index.jade
+157 silly gunzTarPerm extractEntry app/templates/app/scripts/_app.js
+158 silly gunzTarPerm extractEntry app/templates/app/scripts/controllers/_main.js
+159 silly gunzTarPerm extractEntry app/templates/app/scripts/directives/_main.js
+160 silly gunzTarPerm extractEntry app/templates/app/scripts/directives/_sample.js
+161 silly gunzTarPerm extractEntry app/templates/app/scripts/filters/_main.js
+162 silly gunzTarPerm extractEntry app/templates/app/scripts/filters/_sample.js
+163 silly gunzTarPerm extractEntry app/templates/app/scripts/services/_main.js
+164 silly gunzTarPerm extractEntry app/templates/app/scripts/services/_sample.js
+165 silly gunzTarPerm extractEntry app/templates/app/styles/_main.css
+166 silly gunzTarPerm extractEntry app/templates/app/styles/_main.less
+167 silly gunzTarPerm extractEntry app/templates/app/views/contact.html
+168 silly gunzTarPerm extractEntry app/templates/app/views/contact.jade
+169 silly gunzTarPerm extractEntry app/templates/app/views/features.html
+170 silly gunzTarPerm extractEntry app/templates/app/views/features.jade
+171 silly gunzTarPerm extractEntry app/templates/app/views/home.html
+172 silly gunzTarPerm extractEntry app/templates/app/views/home.jade
+173 silly gunzTarPerm extractEntry app/templates/app/views/partials/footer.html
+174 silly gunzTarPerm extractEntry app/templates/app/views/partials/footer.jade
+175 silly gunzTarPerm extractEntry app/templates/app/views/partials/header.html
+176 silly gunzTarPerm extractEntry app/templates/app/views/partials/header.jade
+177 silly gunzTarPerm extractEntry app/templates/_bower.json
+178 silly gunzTarPerm extractEntry app/templates/editorconfig
+179 silly gunzTarPerm extractEntry app/templates/gitattributes
+180 silly gunzTarPerm extractEntry app/templates/gitignore
+181 silly gunzTarPerm extractEntry app/templates/jshintrc
+182 silly gunzTarPerm extractEntry app/templates/themes/cover/_index.html
+183 silly gunzTarPerm extractEntry app/templates/themes/cover/_index.jade
+184 silly gunzTarPerm extractEntry app/templates/themes/cover/scripts/_app.js
+185 silly gunzTarPerm extractEntry app/templates/themes/cover/styles/_main.css
+186 silly gunzTarPerm extractEntry app/templates/themes/cover/styles/_main.less
+187 silly gunzTarPerm extractEntry app/templates/themes/cover/views/contact.html
+188 silly gunzTarPerm extractEntry app/templates/themes/cover/views/contact.jade
+189 silly gunzTarPerm extractEntry app/templates/themes/cover/views/features.html
+190 silly gunzTarPerm extractEntry app/templates/themes/cover/views/features.jade
+191 silly gunzTarPerm extractEntry app/templates/themes/cover/views/home.html
+192 silly gunzTarPerm extractEntry app/templates/themes/cover/views/home.jade
+193 silly gunzTarPerm extractEntry app/templates/themes/cover/views/partials/footer.html
+194 silly gunzTarPerm extractEntry app/templates/themes/cover/views/partials/footer.jade
+195 silly gunzTarPerm extractEntry app/templates/themes/cover/views/partials/header.html
+196 silly gunzTarPerm extractEntry app/templates/themes/cover/views/partials/header.jade
+197 silly gunzTarPerm extractEntry app/templates/themes/dashboard/_index.html
+198 silly gunzTarPerm extractEntry app/templates/themes/dashboard/_index.jade
+199 silly gunzTarPerm extractEntry app/templates/themes/dashboard/scripts/_app.js
+200 silly gunzTarPerm extractEntry app/templates/themes/dashboard/styles/_main.css
+201 silly gunzTarPerm extractEntry app/templates/themes/dashboard/styles/_main.less
+202 silly gunzTarPerm extractEntry app/templates/themes/dashboard/views/dashboard.jade
+203 silly gunzTarPerm extractEntry app/templates/themes/dashboard/views/includes/navbar.jade
+204 silly gunzTarPerm extractEntry app/templates/themes/dashboard/views/includes/sidebar.jade
+205 silly gunzTarPerm extractEntry test/test-creation.js
+206 silly gunzTarPerm extractEntry test/test-load.js
+207 silly lockFile 7daeb445--angular-bootstrap-0-5-1-package tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package
+208 silly lockFile 7daeb445--angular-bootstrap-0-5-1-package tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package
+209 silly lockFile d95083c4-ular-bootstrap-0-5-1-package-tgz tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz
+210 silly lockFile d95083c4-ular-bootstrap-0-5-1-package-tgz tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz
+211 verbose chmod /Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz 644
+212 verbose chown /Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz [ 501, 20 ]
+213 silly lockFile 1270d990-ator-angular-bootstrap-0-5-1-tgz https://registry.npmjs.org/generator-angular-bootstrap/-/generator-angular-bootstrap-0.5.1.tgz
+214 silly lockFile 1270d990-ator-angular-bootstrap-0-5-1-tgz https://registry.npmjs.org/generator-angular-bootstrap/-/generator-angular-bootstrap-0.5.1.tgz
+215 silly lockFile 38976650-enerator-angular-bootstrap-0-5-1 generator-angular-bootstrap@0.5.1
+216 silly lockFile 38976650-enerator-angular-bootstrap-0-5-1 generator-angular-bootstrap@0.5.1
+217 silly lockFile 89e1b7ea-generator-angular-bootstrap generator-angular-bootstrap@
+218 silly lockFile 89e1b7ea-generator-angular-bootstrap generator-angular-bootstrap@
+219 silly resolved [ { name: 'generator-angular-bootstrap',
+219 silly resolved     version: '0.5.1',
+219 silly resolved     description: 'A generator for AngularJS applications',
+219 silly resolved     keywords: [ 'angular', 'yeoman-generator' ],
+219 silly resolved     homepage: 'https://github.com/mgcrea/generator-angular-bootstrap',
+219 silly resolved     bugs: { url: 'https://github.com/mgcrea/generator-angular-bootstrap/issues' },
+219 silly resolved     author:
+219 silly resolved      { name: 'Olivier Louvignes',
+219 silly resolved        email: 'olivier@mg-crea.com',
+219 silly resolved        url: 'https://github.com/mgcrea' },
+219 silly resolved     main: 'app/index.js',
+219 silly resolved     repository:
+219 silly resolved      { type: 'git',
+219 silly resolved        url: 'git://github.com/mgcrea/generator-angular-bootstrap.git' },
+219 silly resolved     scripts: { test: 'mocha' },
+219 silly resolved     dependencies:
+219 silly resolved      { bluebird: '^2.3.4',
+219 silly resolved        chalk: '^0.5.1',
+219 silly resolved        needle: '^0.7.10',
+219 silly resolved        nunjucks: '^1.0.7',
+219 silly resolved        semver: '^4.0.0',
+219 silly resolved        'yeoman-generator': '^0.17.6' },
+219 silly resolved     devDependencies: { chalk: '^0.5.1', mocha: '^1.21.4' },
+219 silly resolved     peerDependencies: { yo: '>=1.0.0' },
+219 silly resolved     engines: { node: '>=0.8.0', npm: '>=1.2.10' },
+219 silly resolved     licenses: [ [Object] ],
+219 silly resolved     readme: '# generator-angular-bootstrap [![Build Status](https://secure.travis-ci.org/mgcrea/generator-angular-bootstrap.png?branch=master)](https://travis-ci.org/mgcrea/generator-angular-bootstrap)\n\nA generator for [Yeoman](http://yeoman.io).\n\n\n## Getting Started\n\n### What is Yeoman?\n\nTrick question. It\'s not a thing. It\'s this guy:\n\n![](http://i.imgur.com/JHaAlBJ.png)\n\nBasically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.\n\nNot every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*\n\n```\n$ npm install -g yo\n```\n\n### Yeoman Generators\n\nYeoman travels light. He didn\'t pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.\n\nTo install generator-angular-bootstrap from npm, run:\n\n```\n$ npm install -g generator-angular-bootstrap\n```\n\nFinally, initiate the generator:\n\n```\n$ yo angular-bootstrap\n```\n\n### Getting To Know Yeoman\n\nYeoman has a heart of gold. He\'s a person with feelings and opinions, but he\'s very easy to work with. If you think he\'s too opinionated, he can be easily convinced.\n\nIf you\'d like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).\n\n\n## License\n\n[MIT License](http://en.wikipedia.org/wiki/MIT_License)\n',
+219 silly resolved     readmeFilename: 'README.md',
+219 silly resolved     _id: 'generator-angular-bootstrap@0.5.1',
+219 silly resolved     dist: { shasum: '6b7584268935c5c7772e74f86649818c3c91d616' },
+219 silly resolved     deprecated: 'deprecated in favor of generator-ng-factory',
+219 silly resolved     _from: 'generator-angular-bootstrap@',
+219 silly resolved     _resolved: 'https://registry.npmjs.org/generator-angular-bootstrap/-/generator-angular-bootstrap-0.5.1.tgz' } ]
+220 info install generator-angular-bootstrap@0.5.1 into /usr/local/lib
+221 info installOne generator-angular-bootstrap@0.5.1
+222 info /usr/local/lib/node_modules/generator-angular-bootstrap unbuild
+223 verbose tar unpack /Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz
+224 silly lockFile a62c3634-ules-generator-angular-bootstrap tar:///usr/local/lib/node_modules/generator-angular-bootstrap
+225 verbose lock tar:///usr/local/lib/node_modules/generator-angular-bootstrap /Users/damiensawyer/.npm/a62c3634-ules-generator-angular-bootstrap.lock
+226 silly lockFile d95083c4-ular-bootstrap-0-5-1-package-tgz tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz
+227 verbose lock tar:///Users/damiensawyer/.npm/generator-angular-bootstrap/0.5.1/package.tgz /Users/damiensawyer/.npm/d95083c4-ular-bootstrap-0-5-1-package-tgz.lock
+228 silly gunzTarPerm modes [ '755', '644' ]
+229 error Error: EACCES, mkdir '/usr/local/lib/node_modules/generator-angular-bootstrap'
+229 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/generator-angular-bootstrap']
+229 error   errno: 3,
+229 error   code: 'EACCES',
+229 error   path: '/usr/local/lib/node_modules/generator-angular-bootstrap',
+229 error   fstream_type: 'Directory',
+229 error   fstream_path: '/usr/local/lib/node_modules/generator-angular-bootstrap',
+229 error   fstream_class: 'DirWriter',
+229 error   fstream_stack:
+229 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+229 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
+229 error      'Object.oncomplete (fs.js:107:15)' ] }
+230 error Please try running this command again as root/Administrator.
+231 error System Darwin 14.3.0
+232 error command "node" "/usr/local/bin/npm" "install" "-g" "generator-angular-bootstrap"
+233 error cwd /Users/damiensawyer/code/flashcards
+234 error node -v v0.10.24
+235 error npm -v 1.3.21
+236 error path /usr/local/lib/node_modules/generator-angular-bootstrap
+237 error fstream_path /usr/local/lib/node_modules/generator-angular-bootstrap
+238 error fstream_type Directory
+239 error fstream_class DirWriter
+240 error code EACCES
+241 error errno 3
+242 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/generator-angular-bootstrap'
+243 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+243 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
+243 error fstream_stack Object.oncomplete (fs.js:107:15)
+244 verbose exit [ 3, true ]
