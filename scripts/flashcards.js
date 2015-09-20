@@ -1,5 +1,6 @@
 /// <reference path="types/knockout.d.ts"/>
 /// <reference path="types/underscore.d.ts"/>
+/// <reference path="types/underscore.string.d.ts"/>
 // DON'T FORGET TO COMPILE THE TYPESCRIPT. There is no grunt / gulp watcher
 var FlashCardPageViewModel = (function () {
     function FlashCardPageViewModel() {

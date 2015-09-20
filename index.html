@@ -46,8 +46,7 @@
 
         <!-- results -->
         <div data-bind="foreach:distinctList">
-          <div class="span7"> 
-            <div class="span7"
+            <div data-bind="visible:!!$data, text:$data"
             style="float:left;
             padding:10px 50px;
             margin:10px 10px;
@@ -56,9 +55,8 @@
             min-width:200px;
             text-align:center;
             border:3px double black;"
-            class="thumbnail" data-bind="text:$data">
+            class="thumbnail" >
 
-          </div>
         </div>
       </div>
 
@@ -75,6 +73,7 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/knockout/knockout.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/underscore.string/underscore.string.min.js"></script>
     <script src="scripts/flashcards.js"></script>
     <script type="text/javascript">
 
