@@ -38,7 +38,7 @@
         min-width:500px;
         text-align:center;
         text-color:black;
-        background-image:url(back1.jpg);
+        background-image:url(back.jpg);
         border:3px solid rgba(170,170,170,1);
         text-shadow:4px 7px 7px rgba(170,170,170,1);font-weight:normal;color:#000000;
         -webkit-text-stroke-width: 1px;
@@ -48,7 +48,7 @@
         ">
       </div>
 
-      <button class="btn btn-info btn-xs" data-bind="click:endGame">End Game"</button>
+      <button class="btn btn-info btn-xs" data-bind="click:endGame">End Game</button>
     </div>
 
 
@@ -58,7 +58,7 @@
       <form>
         <div class="form-group">
           <label>Enter the text of the document</label>
-          <textarea data-bind="value:sourceText, valueUpdate:'keyup'" class="form-control" rows="10"></textarea>
+          <textarea data-bind="value:sourceText, valueUpdate:'keyup'" class="form-control" rows="10" style="margin-bottom:10px;"></textarea>
           <button class="btn btn-info btn-xs" data-bind="click:loadTale">Load "A Tale of Two Sisters"</button>
           <button class="btn btn-success btn-xs" data-bind="click:playGame">Play Game</button>
         </div>
