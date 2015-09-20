@@ -28,72 +28,96 @@
     </head>
     <body>
 
-      <div class="container">
-        <h1>Unique Flash Card Generator</h1>
-
-        <form>
-          <div class="form-group">
-            <label>Enter the text of the document</label>
-            <textarea data-bind="value:sourceText, valueUpdate:'keyup'" class="form-control" rows="10"></textarea>
-            <button class="btn btn-info btn-xs" data-bind="click:loadTale">Load "A Tale of Two Sisters"</button>
-            <button class="btn btn-success btn-xs" data-bind="click:playGame">Play Game :-)"</button>
-          </div>
-
-          <div class="form-group">
-            <label data-bind="text:outputLabel"></label>
-            <textarea data-bind="visible:false;text:wordList" class="form-control" rows="10"></textarea>
-          </div>
-
-        </form>
-
-        <!-- results -->
-        <div data-bind="foreach:distinctList">
-          <div data-bind="visible:!!$data, text:$data"
-          style="float:left;
-          padding:10px 50px;
-          margin:10px 10px;
-          height:85px;
-          font-size:30pt;
-          min-width:200px;
-          text-align:center;
-          text-color:black;
-          background-image:url(back1.jpg);
-          border:3px solid rgba(170,170,170,1);
-          text-shadow:4px 7px 7px rgba(170,170,170,1);font-weight:normal;color:#000000;
-          -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: white;
-          font-weight:bolder;     
-          "
-
-          class="thumbnail" >
-
-
-
-
-        </div>
+      <div data-bind = "visible:gameMode()" class="container">
+        <div data-bind="click:randomCard, text:currentCard" 
+        style="float:left;
+        padding:10px 50px;
+        margin:100px 10px;
+        height:150px;
+        font-size:60pt;
+        min-width:500px;
+        text-align:center;
+        text-color:black;
+        background-image:url(back1.jpg);
+        border:3px solid rgba(170,170,170,1);
+        text-shadow:4px 7px 7px rgba(170,170,170,1);font-weight:normal;color:#000000;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+        font-weight:bolder;     
+        cursor:pointer;
+        ">
       </div>
 
-
+      <button class="btn btn-info btn-xs" data-bind="click:endGame">End Game"</button>
     </div>
 
-    <!-- <div data-bind="template: { name: 'person-template', data: null }"></div> -->
+
+    <div data-bind = "visible:!gameMode()" class="container">
+      <h1>Unique Flash Card Generator</h1>
+
+      <form>
+        <div class="form-group">
+          <label>Enter the text of the document</label>
+          <textarea data-bind="value:sourceText, valueUpdate:'keyup'" class="form-control" rows="10"></textarea>
+          <button class="btn btn-info btn-xs" data-bind="click:loadTale">Load "A Tale of Two Sisters"</button>
+          <button class="btn btn-success btn-xs" data-bind="click:playGame">Play Game</button>
+        </div>
+
+        <div class="form-group">
+          <label data-bind="text:outputLabel"></label>
+          <textarea data-bind="visible:false;text:wordList" class="form-control" rows="10"></textarea>
+        </div>
+
+      </form>
+
+      <!-- results -->
+      <div data-bind="foreach:distinctList">
+        <div data-bind="visible:!!$data, text:$data"
+        style="float:left;
+        padding:10px 50px;
+        margin:10px 10px;
+        height:85px;
+        font-size:30pt;
+        min-width:200px;
+        text-align:center;
+        text-color:black;
+        background-image:url(back1.jpg);
+        border:3px solid rgba(170,170,170,1);
+        text-shadow:4px 7px 7px rgba(170,170,170,1);font-weight:normal;color:#000000;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+        font-weight:bolder;     
+        "
+
+        class="thumbnail" >
 
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/knockout/knockout.js"></script>
-    <script src="bower_components/underscore/underscore-min.js"></script>
-    <script src="bower_components/underscore.string/underscore.string.min.js"></script>
-    <script src="scripts/flashcards.js"></script>
-    <script type="text/javascript">
 
-      var vm = new FlashCardPageViewModel();
-      ko.applyBindings(vm);
+      </div>
+    </div>
 
-    </script>
 
-  </body>
-  </html>
+  </div>
+
+  <!-- <div data-bind="template: { name: 'person-template', data: null }"></div> -->
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/knockout/knockout.js"></script>
+  <script src="bower_components/underscore/underscore-min.js"></script>
+  <script src="bower_components/underscore.string/underscore.string.min.js"></script>
+  <script src="scripts/flashcards.js"></script>
+  <script type="text/javascript">
+
+    var vm = new FlashCardPageViewModel();
+    ko.applyBindings(vm);
+
+  </script>
+
+</body>
+</html>
