@@ -3,13 +3,6 @@
 /// <reference path="types/underscore.string.d.ts"/>
 /// <reference path="types/jquery.d.ts"/>
 // DON'T FORGET TO COMPILE THE TYPESCRIPT. There is no grunt / gulp watcher
-var flashCards;
-(function (flashCards) {
-    function receivedFlikrData(data) {
-        console.log(data);
-    }
-    flashCards.receivedFlikrData = receivedFlikrData;
-})(flashCards || (flashCards = {}));
 var FlashCardPageViewModel = (function () {
     function FlashCardPageViewModel() {
         var _this = this;
@@ -56,26 +49,6 @@ var FlashCardPageViewModel = (function () {
     FlashCardPageViewModel.prototype.randomCard = function () {
         var i = _.random(0, this.distinctList().length - 1);
         this.currentCard(this.distinctList()[i]);
-    };
-    FlashCardPageViewModel.prototype.getFlickerImages = function (tags) {
-        $.ajax({
-            url: "http://api.flickr.com/services/feeds/photos_public.gne",
-            // The name of the callback parameter, as specified by the YQL service
-            //jsonp: "gotdata",
-            dataType: "jsonp",
-            data: {
-                qtags: tags,
-                tagmode: "any",
-                format: "json",
-                lang: "en-us",
-                jsoncallback: 'flashCards.receivedFlikrData' // not really sure how this works... have to give it a function name for jsonp? http://blog.michaelhamrah.com/2010/02/using-flickr-and-jquery-to-learn-jsonp/
-            },
-            // Work with the response
-            success: function (response) {
-                console.log('success');
-                console.log(response); // server response
-            }
-        });
     };
     return FlashCardPageViewModel;
 })();

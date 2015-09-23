@@ -1,12 +1,14 @@
 /// <reference path="types/knockout.d.ts"/>
 /// <reference path="types/underscore.d.ts"/>
-/// <reference path="types/underscore.string.d.ts"/>
 /// <reference path="types/jquery.d.ts"/>
+/// <reference path="types/rx-lite.d.ts"/>
 var flikr;
 (function (flikr) {
+    flikr.flikrSubject = new Rx.Subject();
     function receivedFlikrData(data) {
         var imageUrls = _.map(data.items, function (x) { return x.media.m; });
-        console.log(imageUrls);
+        flikr.flikrSubject.onNext(imageUrls);
+        //console.log(imageUrls);
     }
     flikr.receivedFlikrData = receivedFlikrData;
     function getFlickerImages(tags) {

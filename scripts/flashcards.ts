@@ -5,12 +5,7 @@
 
 
 // DON'T FORGET TO COMPILE THE TYPESCRIPT. There is no grunt / gulp watcher
-module flashCards{
-export function receivedFlikrData(data)
-		{
-			console.log(data);
-		}
-	}
+
 
 class FlashCardPageViewModel
 {
@@ -72,34 +67,6 @@ class FlashCardPageViewModel
 			this.currentCard(this.distinctList()[i]);
 		}
 
-
-		getFlickerImages(tags:string)
-		{
-
-			$.ajax({
-				url: "http://api.flickr.com/services/feeds/photos_public.gne",
-
-    // The name of the callback parameter, as specified by the YQL service
-    //jsonp: "gotdata",
-    dataType: "jsonp",
-    data: {
-    	qtags: tags,
-    	tagmode:"any",
-    	format: "json",
-    	lang:"en-us",
-        jsoncallback:'flashCards.receivedFlikrData' // not really sure how this works... have to give it a function name for jsonp? http://blog.michaelhamrah.com/2010/02/using-flickr-and-jquery-to-learn-jsonp/
-
-        },
-
-    // Work with the response
-    success: function( response ) {
-    	console.log('success')
-        console.log( response ); // server response
-    }
-
-    });
-
-		}
 
 	}
 

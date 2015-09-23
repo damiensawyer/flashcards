@@ -1,11 +1,11 @@
 /// <reference path="types/knockout.d.ts"/>
 /// <reference path="types/underscore.d.ts"/>
-/// <reference path="types/underscore.string.d.ts"/>
 /// <reference path="types/jquery.d.ts"/>
+/// <reference path="types/rx-lite.d.ts"/>
 
 module flikr{
 
-	interface IflikResult
+	export interface IflikResult
 	{
 		items:{
 			media:{
@@ -14,10 +14,13 @@ module flikr{
 			}[];
 		}
 
+		export var flikrSubject:Rx.Subject<string[]> = new Rx.Subject<string[]>();
+
 		export function receivedFlikrData(data:IflikResult)
 		{
 			var imageUrls = _.map(data.items, x => x.media.m);
-			console.log(imageUrls);
+			flikr.flikrSubject.onNext(imageUrls)
+			//console.log(imageUrls);
 		}
 
 		export function getFlickerImages(tags:string)
@@ -34,8 +37,5 @@ module flikr{
         		jsoncallback:'flikr.receivedFlikrData' // not really sure how this works... have to give it a function name for jsonp? http://blog.michaelhamrah.com/2010/02/using-flickr-and-jquery-to-learn-jsonp/
         	}
         	});
-
 	}
-
-
 }
