@@ -46,12 +46,17 @@ class FlashCardPageViewModel
 	constructor()
 	{
 		flikr.flikrSubject.subscribe((x:flikr.IflikResult) =>{
-			this.flikrResultsDictionary[x.title] = x.images.slice(0,4);
+			this.flikrResultsDictionary[x.title] = x.images.slice(0,3);
 			this.flikrResultsUpdated.valueHasMutated();
 			console.log('changing');
 		});
 		
-		this.distinctList.subscribe(x => _.each(x, k=> flikr.getFlickerImages(k))); // this is going to be slow... too many queries for partial words...
+		this.distinctList.subscribe(x => _.each(x, k=> {
+			if (!this.flikrResultsDictionary.hasOwnProperty(k))
+			{
+				flikr.getFlickerImages(k);
+			}
+			})); // this is going to be slow... too many queries for partial words...
 	}	
 
 	wordList = ko.computed<string>(() => {

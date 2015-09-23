@@ -35,11 +35,15 @@ var FlashCardPageViewModel = (function () {
         });
         this.outputLabel = ko.computed(function () { return "Here are the list of " + _this.wordList().split(' ').length + " unique words."; });
         flikr.flikrSubject.subscribe(function (x) {
-            _this.flikrResultsDictionary[x.title] = x.images.slice(0, 5);
+            _this.flikrResultsDictionary[x.title] = x.images.slice(0, 3);
             _this.flikrResultsUpdated.valueHasMutated();
             console.log('changing');
         });
-        this.distinctList.subscribe(function (x) { return _.each(x, function (k) { return flikr.getFlickerImages(k); }); }); // this is going to be slow... too many queries for partial words...
+        this.distinctList.subscribe(function (x) { return _.each(x, function (k) {
+            if (!_this.flikrResultsDictionary.hasOwnProperty(k)) {
+                flikr.getFlickerImages(k);
+            }
+        }); }); // this is going to be slow... too many queries for partial words...
     }
     FlashCardPageViewModel.prototype.loadTale = function (template) {
         var tale;
