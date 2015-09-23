@@ -73,41 +73,60 @@
 
       <!-- results -->
       
-      <div data-bind="foreach:distinctList_img">
-      
-      <pre data-bind="text:ko.toJSON($data)"></pre>
-        <div data-bind=" text:$data.word"></div>
+      <!-- ko foreach:distinctList_img-->
+      <div class="row" style="margin:15px 0px;">
+        <!-- <pre data-bind="text:ko.toJSON($data)"></pre> -->
+        <div class="span3" data-bind=" text:$data.word"
+        style="float:left;padding:10px 50px;
+        margin:10px 10px;
+        height:85px;
+        font-size:30pt;
+        width:300px;
+        text-align:center;
+        text-color:black;
+        background-image:url(back1.jpg);
+        border:3px solid rgba(170,170,170,1);
+        text-shadow:4px 7px 7px rgba(170,170,170,1);font-weight:normal;color:#000000;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+        font-weight:bolder;     
+        "
+        class="" ></div>
+
         <!-- ko if:images -->
         <!-- ko foreach:images -->
-        <img style ="" data-bind="attr:{src:$data}"/>
+        <img class="span3" style ="max-height:130px;max-width:250px;" data-bind="attr:{src:$data}"/>
         <!-- /ko-->
         <!-- /ko--> 
+        <hr style="border:1px solid silver;"/>
+      </div>
+      <!-- /ko--> 
+
+
     </div>
 
-  </div>
-
-  <!-- <div data-bind="template: { name: 'person-template', data: null }"></div> -->
+    <!-- <div data-bind="template: { name: 'person-template', data: null }"></div> -->
 
 
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="bower_components/knockout/knockout.js"></script>
-  <script src="bower_components/underscore/underscore-min.js"></script>
-  <!--<script src="bower_components/underscore.string/underscore.string.min.js"></script> -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/rxjs/dist/rx.all.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/knockout/knockout.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <!--<script src="bower_components/underscore.string/underscore.string.min.js"></script> -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/rxjs/dist/rx.all.js"></script>
 
 
-  <script src="scripts/flikr.js"></script>
-  <script src="scripts/flashcards.js"></script>
-  
-  <script type="text/javascript">
+    <script src="scripts/flikr.js"></script>
+    <script src="scripts/flashcards.js"></script>
 
-    var vm = new FlashCardPageViewModel();
-    ko.applyBindings(vm);
+    <script type="text/javascript">
+
+      var vm = new FlashCardPageViewModel();
+      ko.applyBindings(vm);
     //flikr.flikrSubject.subscribe(function(x){console.log(x);});
 
   </script>

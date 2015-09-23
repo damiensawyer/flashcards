@@ -46,7 +46,7 @@ class FlashCardPageViewModel
 	constructor()
 	{
 		flikr.flikrSubject.subscribe((x:flikr.IflikResult) =>{
-			this.flikrResultsDictionary[x.title] = x.images.slice(0,3);
+			this.flikrResultsDictionary[x.title] = x.images.slice(0,4);
 			this.flikrResultsUpdated.valueHasMutated();
 			console.log('changing');
 		});

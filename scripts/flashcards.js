@@ -35,7 +35,7 @@ var FlashCardPageViewModel = (function () {
         });
         this.outputLabel = ko.computed(function () { return "Here are the list of " + _this.wordList().split(' ').length + " unique words."; });
         flikr.flikrSubject.subscribe(function (x) {
-            _this.flikrResultsDictionary[x.title] = x.images.slice(0, 3);
+            _this.flikrResultsDictionary[x.title] = x.images.slice(0, 5);
             _this.flikrResultsUpdated.valueHasMutated();
             console.log('changing');
         });
