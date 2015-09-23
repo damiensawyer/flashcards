@@ -15,7 +15,7 @@ interface IWordWithImages
 
 class FlashCardPageViewModel
 {
-	sourceText = ko.observable<string>('');
+	sourceText = ko.observable<string>('car boat');
 	gameMode= ko.observable(false);
 	currentCard= ko.observable('');
 	flikrResultsDictionary: { [key: string ]: string[]} = {};
@@ -34,8 +34,8 @@ class FlashCardPageViewModel
 
 		});
 	distinctList_img = ko.computed<IWordWithImages[]>(()=>{
-		console.log("distinctList_img updated" );
-		console.log(this.flikrResultsDictionary);
+		// console.log("distinctList_img updated" );
+		// console.log(this.flikrResultsDictionary);
 		var trigger = this.flikrResultsUpdated();
 		var words = this.distinctList();
 		var result = _.map(words, (w)=> { return {word:w, images:this.flikrResultsDictionary[w]  }});
@@ -51,7 +51,7 @@ class FlashCardPageViewModel
 			console.log('changing');
 		});
 		
-		this.sourceText.subscribe(x => flikr.getFlickerImages(x)); // this is going to be slow... too many queries for partial words...
+		this.distinctList.subscribe(x => _.each(x, k=> flikr.getFlickerImages(k))); // this is going to be slow... too many queries for partial words...
 	}	
 
 	wordList = ko.computed<string>(() => {

@@ -75,31 +75,14 @@
       
       <div data-bind="foreach:distinctList_img">
       
-      <!-- <pre data-bind="text:ko.toJSON($data)"></pre> -->
-        <div data-bind="visible:!!$data, text:$data.word"
-        style="float:left;
-        padding:10px 50px;
-        margin:10px 10px;
-        height:85px;
-        font-size:30pt;
-        min-width:200px;
-        text-align:center;
-        text-color:black;
-        background-image:url(back1.jpg);
-        border:3px solid rgba(170,170,170,1);
-        text-shadow:4px 7px 7px rgba(170,170,170,1);font-weight:normal;color:#000000;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        font-weight:bolder;     
-        "
-        class="thumbnail" >
-
-      </div>
+      <pre data-bind="text:ko.toJSON($data)"></pre>
+        <div data-bind=" text:$data.word"></div>
+        <!-- ko if:images -->
         <!-- ko foreach:images -->
-        <img style ="float:left;" data-bind="attr:{src:$data}"/>
-        <!-- /ko-->> 
+        <img style ="" data-bind="attr:{src:$data}"/>
+        <!-- /ko-->
+        <!-- /ko--> 
     </div>
-
 
   </div>
 

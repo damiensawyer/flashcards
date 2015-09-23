@@ -6,7 +6,7 @@
 var FlashCardPageViewModel = (function () {
     function FlashCardPageViewModel() {
         var _this = this;
-        this.sourceText = ko.observable('');
+        this.sourceText = ko.observable('car boat');
         this.gameMode = ko.observable(false);
         this.currentCard = ko.observable('');
         this.flikrResultsDictionary = {};
@@ -22,8 +22,8 @@ var FlashCardPageViewModel = (function () {
             return filtered;
         });
         this.distinctList_img = ko.computed(function () {
-            console.log("distinctList_img updated");
-            console.log(_this.flikrResultsDictionary);
+            // console.log("distinctList_img updated" );
+            // console.log(this.flikrResultsDictionary);
             var trigger = _this.flikrResultsUpdated();
             var words = _this.distinctList();
             var result = _.map(words, function (w) { return { word: w, images: _this.flikrResultsDictionary[w] }; });
@@ -39,7 +39,7 @@ var FlashCardPageViewModel = (function () {
             _this.flikrResultsUpdated.valueHasMutated();
             console.log('changing');
         });
-        this.sourceText.subscribe(function (x) { return flikr.getFlickerImages(x); }); // this is going to be slow... too many queries for partial words...
+        this.distinctList.subscribe(function (x) { return _.each(x, function (k) { return flikr.getFlickerImages(k); }); }); // this is going to be slow... too many queries for partial words...
     }
     FlashCardPageViewModel.prototype.loadTale = function (template) {
         var tale;
