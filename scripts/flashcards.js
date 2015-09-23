@@ -2,13 +2,15 @@
 /// <reference path="types/underscore.d.ts"/>
 /// <reference path="types/underscore.string.d.ts"/>
 /// <reference path="types/jquery.d.ts"/>
-// DON'T FORGET TO COMPILE THE TYPESCRIPT. There is no grunt / gulp watcher
+/// <reference path="flikr.ts"/>
 var FlashCardPageViewModel = (function () {
     function FlashCardPageViewModel() {
         var _this = this;
         this.sourceText = ko.observable('');
         this.gameMode = ko.observable(false);
         this.currentCard = ko.observable('');
+        this.flikrResultsDictionary = {};
+        this.flikrResultsUpdated = ko.observable(); // just a trigger
         this.distinctList = ko.computed(function () {
             var s = _this.sourceText();
             var fullList = s.replace(/\./g, '')
@@ -19,11 +21,25 @@ var FlashCardPageViewModel = (function () {
             var filtered = _.filter(distinctList, function (x) { return !!x; });
             return filtered;
         });
+        this.distinctList_img = ko.computed(function () {
+            console.log("distinctList_img updated");
+            console.log(_this.flikrResultsDictionary);
+            var trigger = _this.flikrResultsUpdated();
+            var words = _this.distinctList();
+            var result = _.map(words, function (w) { return { word: w, images: _this.flikrResultsDictionary[w] }; });
+            return result;
+        });
         this.wordList = ko.computed(function () {
             return _this.distinctList()
                 .join(' ');
         });
         this.outputLabel = ko.computed(function () { return "Here are the list of " + _this.wordList().split(' ').length + " unique words."; });
+        flikr.flikrSubject.subscribe(function (x) {
+            _this.flikrResultsDictionary[x.title] = x.images.slice(0, 3);
+            _this.flikrResultsUpdated.valueHasMutated();
+            console.log('changing');
+        });
+        this.sourceText.subscribe(function (x) { return flikr.getFlickerImages(x); }); // this is going to be slow... too many queries for partial words...
     }
     FlashCardPageViewModel.prototype.loadTale = function (template) {
         var tale;

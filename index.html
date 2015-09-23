@@ -72,8 +72,11 @@
       </form>
 
       <!-- results -->
-      <div data-bind="foreach:distinctList">
-        <div data-bind="visible:!!$data, text:$data"
+      
+      <div data-bind="foreach:distinctList_img">
+      
+      <!-- <pre data-bind="text:ko.toJSON($data)"></pre> -->
+        <div data-bind="visible:!!$data, text:$data.word"
         style="float:left;
         padding:10px 50px;
         margin:10px 10px;
@@ -89,13 +92,12 @@
         -webkit-text-stroke-color: white;
         font-weight:bolder;     
         "
-
         class="thumbnail" >
 
-
-
-
       </div>
+        <!-- ko foreach:images -->
+        <img style ="float:left;" data-bind="attr:{src:$data}"/>
+        <!-- /ko-->> 
     </div>
 
 
@@ -123,7 +125,7 @@
 
     var vm = new FlashCardPageViewModel();
     ko.applyBindings(vm);
-    flikr.flikrSubject.subscribe(x => console.log(x));
+    //flikr.flikrSubject.subscribe(function(x){console.log(x);});
 
   </script>
 

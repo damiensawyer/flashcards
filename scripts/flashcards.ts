@@ -2,16 +2,24 @@
 /// <reference path="types/underscore.d.ts"/>
 /// <reference path="types/underscore.string.d.ts"/>
 /// <reference path="types/jquery.d.ts"/>
+/// <reference path="flikr.ts"/>
 
 
 // DON'T FORGET TO COMPILE THE TYPESCRIPT. There is no grunt / gulp watcher
 
+interface IWordWithImages
+{
+	word:string;
+	images:string[];
+}
 
 class FlashCardPageViewModel
 {
 	sourceText = ko.observable<string>('');
 	gameMode= ko.observable(false);
 	currentCard= ko.observable('');
+	flikrResultsDictionary: { [key: string ]: string[]} = {};
+	flikrResultsUpdated= ko.observable(); // just a trigger
 	distinctList = ko.computed<string[]>(() => {
 		var s = this.sourceText();
 		var fullList = s.replace(/\./g, '')
@@ -25,6 +33,26 @@ class FlashCardPageViewModel
 		return filtered;
 
 		});
+	distinctList_img = ko.computed<IWordWithImages[]>(()=>{
+		console.log("distinctList_img updated" );
+		console.log(this.flikrResultsDictionary);
+		var trigger = this.flikrResultsUpdated();
+		var words = this.distinctList();
+		var result = _.map(words, (w)=> { return {word:w, images:this.flikrResultsDictionary[w]  }});
+		return result;
+	}
+	);
+	
+	constructor()
+	{
+		flikr.flikrSubject.subscribe((x:flikr.IflikResult) =>{
+			this.flikrResultsDictionary[x.title] = x.images.slice(0,3);
+			this.flikrResultsUpdated.valueHasMutated();
+			console.log('changing');
+		});
+		
+		this.sourceText.subscribe(x => flikr.getFlickerImages(x)); // this is going to be slow... too many queries for partial words...
+	}	
 
 	wordList = ko.computed<string>(() => {
 		return this.distinctList()

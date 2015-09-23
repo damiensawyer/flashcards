@@ -5,9 +5,18 @@
 var flikr;
 (function (flikr) {
     flikr.flikrSubject = new Rx.Subject();
+    function extractSearchTermFromFlikrLink(link) {
+        // eg "http://www.flickr.com/photos/tags/girl/"
+        var words = link.split('/');
+        var result = words[words.length - 2];
+        return result;
+    }
+    flikr.extractSearchTermFromFlikrLink = extractSearchTermFromFlikrLink;
     function receivedFlikrData(data) {
         var imageUrls = _.map(data.items, function (x) { return x.media.m; });
-        flikr.flikrSubject.onNext(imageUrls);
+        var searchTerm = extractSearchTermFromFlikrLink(data.link);
+        flikr.flikrSubject.onNext({ title: searchTerm, images: imageUrls });
+        //console.log(data);
         //console.log(imageUrls);
     }
     flikr.receivedFlikrData = receivedFlikrData;

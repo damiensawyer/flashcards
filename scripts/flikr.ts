@@ -5,21 +5,42 @@
 
 module flikr{
 
-	export interface IflikResult
+	export interface IflikResultFromServer
 	{
+		title:string;
+		link:string;
 		items:{
 			media:{
 				m:string;
 			};
 			}[];
 		}
+		
+		export interface IflikResult
+	{
+		title:string;
+		images: string[];
+	}
+		export var flikrResultsDictionary: { [key: string ]: string[]};
 
-		export var flikrSubject:Rx.Subject<string[]> = new Rx.Subject<string[]>();
+		export var flikrSubject:Rx.Subject<IflikResult> = new Rx.Subject<IflikResult>();
 
-		export function receivedFlikrData(data:IflikResult)
+		export function extractSearchTermFromFlikrLink(link:string)
+		{
+			// eg "http://www.flickr.com/photos/tags/girl/"
+			var words = link.split('/');
+			var result = words[words.length -2];
+			return result;
+		}
+
+		export function receivedFlikrData(data:IflikResultFromServer)
 		{
 			var imageUrls = _.map(data.items, x => x.media.m);
-			flikr.flikrSubject.onNext(imageUrls)
+			var searchTerm	= extractSearchTermFromFlikrLink(data.link);
+
+			flikr.flikrSubject.onNext({title:searchTerm,images:imageUrls});
+
+			//console.log(data);
 			//console.log(imageUrls);
 		}
 
