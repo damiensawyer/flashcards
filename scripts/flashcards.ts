@@ -65,7 +65,7 @@ class FlashCardPageViewModel
 
 		});
 
-	outputLabel = ko.computed(()=>"Here are the list of " + this.wordList().split(' ').length + " unique words. Images are from Flikr. As you can see, they leave a little to be disired... perhaps switch to Bing");
+	outputLabel = ko.computed(()=>"Here are the list of " + this.wordList().split(' ').length + " unique words. Images are from Flikr. As you can see, they leave a little to be desired... perhaps switch to Bing");
 
 	loadTale(template:string){
 		var tale: string;
