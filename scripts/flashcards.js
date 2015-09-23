@@ -33,7 +33,7 @@ var FlashCardPageViewModel = (function () {
             return _this.distinctList()
                 .join(' ');
         });
-        this.outputLabel = ko.computed(function () { return "Here are the list of " + _this.wordList().split(' ').length + " unique words. Images are from Flikr. As you can see, they leave a little to be disired... perhaps switch to Bing"; });
+        this.outputLabel = ko.computed(function () { return "Here are the list of " + _this.wordList().split(' ').length + " unique words. Images are from Flikr. As you can see, they leave a little to be desired... perhaps switch to Bing"; });
         flikr.flikrSubject.subscribe(function (x) {
             _this.flikrResultsDictionary[x.title] = x.images.slice(0, 3);
             _this.flikrResultsUpdated.valueHasMutated();
