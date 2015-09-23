@@ -59,8 +59,10 @@
         <div class="form-group">
           <label>Enter the text of the document</label>
           <textarea data-bind="value:sourceText, valueUpdate:'keyup'" class="form-control" rows="10" style="margin-bottom:10px;"></textarea>
-          <button class="btn btn-info btn-xs" data-bind="click:loadTale.bind($data,'sisters')">Load "A Tale of Two Sisters"</button>
+          <!-- <button class="btn btn-info btn-xs" data-bind="click:loadTale.bind($data,'sisters')">Load "A Tale of Two Sisters"</button> -->
+          <button class="btn btn-info btn-xs" data-bind="click:loadTale.bind($data, 'simplenouns')">Load Simple Nouns</button>
           <button class="btn btn-info btn-xs" data-bind="click:loadTale.bind($data, 'simple')">Load Simple Words</button>
+          
           <button class="btn btn-success btn-xs" data-bind="click:playGame">Play Game</button>
         </div>
 
