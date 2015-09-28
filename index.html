@@ -67,7 +67,7 @@
         </div>
 
         <div class="form-group">
-          <label data-bind="text:outputLabel"></label>
+          <label data-bind="text:outputLabel, visible:distinctList().length > 0"></label>
           <textarea data-bind="visible:false;text:wordList" class="form-control" rows="10"></textarea>
         </div>
 
