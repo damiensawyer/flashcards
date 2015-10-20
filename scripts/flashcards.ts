@@ -86,6 +86,7 @@ class FlashCardPageViewModel
 			}
 
 			this.sourceText(tale);
+			
 		}
 
 		playGame(){
@@ -95,7 +96,6 @@ class FlashCardPageViewModel
 
 		endGame(){
 			this.gameMode(false);
-
 		}
 
 		randomCard()
