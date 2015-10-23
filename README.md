@@ -6,3 +6,5 @@ Simple web page to help teaching our daughter to read. Images taken from googleb
 - Switch images to Bing
 - Set up a Node server to server images so that we can hide Bing API key
 - Allow image search to be different from word. For example, `Anna~[anna frozen]` will display the word Anna but search for the image 'anna frozen'
+- Only have limited free requests on Bing, so cache results locally in https://www.npmjs.com/package/nedb 
+- Set up Jasmine Tests
