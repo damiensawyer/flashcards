@@ -4,7 +4,6 @@
 /// <reference path="types/rx-lite.d.ts"/>
 
 module flikr{
-
 	export interface IflikResultFromServer
 	{
 		title:string;
@@ -14,9 +13,9 @@ module flikr{
 				m:string;
 			};
 			}[];
-		}
-		
-		export interface IflikResult
+	}
+
+	export interface IflikResult
 	{
 		title:string;
 		images: string[];
