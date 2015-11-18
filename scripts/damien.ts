@@ -1,5 +1,4 @@
 class Damien
 {
 	name:string;
-	
 }

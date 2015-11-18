@@ -1,0 +1,19 @@
+{
+  "name": "flashcards",
+  "version": "0.0.0",
+  "description": "Simple web page to help teaching our daughter to read. Images taken from googlebing. Sample text taken from a book from the library. No copyright infringement intended.",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "~1.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@azure.daddigital.com:opt/git/flashcards.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
